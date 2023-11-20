@@ -384,6 +384,7 @@ double VelocityProfileGenerator::calc_final_speed(const double& v_i,
   // description of this function. Make sure you handle negative discriminant
   // and make v_f = 0 in that case. If the discriminant is inf or nan return
   // infinity
+  v_f = sqrt(pow(v_i, 2) + 2*d*a);
 
   double disc = pow(v_f, 2) - 4*a*v_i;  // <- Fixed this
   if (disc <= 0.0) {
