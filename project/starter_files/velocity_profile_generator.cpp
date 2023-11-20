@@ -386,7 +386,7 @@ double VelocityProfileGenerator::calc_final_speed(const double& v_i,
   // infinity
   v_f = sqrt(pow(v_i, 2) + 2*a*d);
 
-  double disc = pow(v_i, 2) - 2*a*d;  // <- Fixed this
+  double disc = pow(v_i, 2) + 2*a*d;  // <- Fixed this
   if (disc <= 0.0) {
     v_f = 0.0;
   } else if (disc == std::numeric_limits<double>::infinity() ||
